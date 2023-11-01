@@ -5,6 +5,6 @@
 
 распределение сил:
 
-gridgff делает фронт энд
-firewolf бэк бой
+gridgff делает frontend
+firewolf backend
 danielklimovoff делает парсер (руководит процессом)
