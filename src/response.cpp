@@ -302,7 +302,7 @@ public:
         char buff[PATH_MAX];
         //app_path = local_path;
         ssize_t length = readlink("/proc/self/exe", buff, sizeof(buff));
-        std::cout << "   Path: " << buff << std::endl;
+        std::cout << "apis -> path: " << buff << std::endl;
         app_path = ((std::string)buff).substr(0, ((std::string)buff).rfind("/"));
         std::cout << "------------------\nLoading apis:\n";
         ::memset(buff, 0, sizeof(buff));

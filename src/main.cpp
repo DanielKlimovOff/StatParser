@@ -30,19 +30,30 @@ void read_cfg() {
     }
     //cout << "LINE PARSE " + text;
     nlohmann::json config = config.parse(text);
-    *(main_data.active_epols) = config["SERVER"]["CONFIG"]["EPOLLS_COUNT"].get<int>();
-    *(main_data.ip) = config["SERVER"]["CONFIG"]["IP"].get<string>();
-    *(main_data.portptr) = config["SERVER"]["CONFIG"]["PORT"].get<uint>();
-    *(main_data.pages) = config["SERVER"]["CONFIG"]["PATH_PAGES"].get<string>();
-    enable_ssl = config["SERVER"]["SSL"]["ENABLE"].get<bool>();
-    main_data.machine_info = config["SERVER"]["CONFIG"]["MACHINE_INFO"].get<bool>();
-    main_data.proxy_path = config["PROXY_SERVER"]["PROXY"];
+    if(config["SERVER"].contains("CONFIG")) {
+        *(main_data.active_epols) = config["SERVER"]["CONFIG"]["EPOLLS_COUNT"].get<int>();
+        *(main_data.ip) = config["SERVER"]["CONFIG"]["IP"].get<string>();
+        *(main_data.portptr) = config["SERVER"]["CONFIG"]["PORT"].get<uint>();
+        *(main_data.pages) = config["SERVER"]["CONFIG"]["PATH_PAGES"].get<string>();
+        main_data.machine_info = config["SERVER"]["CONFIG"]["MACHINE_INFO"].get<bool>();
+
+    }
+    if(config["SERVER"].contains("SSL") == true) {
+        enable_ssl = config["SERVER"]["SSL"]["ENABLE"].get<bool>();
+    }
+    if(config.contains("PROXY_SERVER")) {
+        main_data.proxy_path = config["PROXY_SERVER"]["PROXY"];
+    }
     try {
-        main_data.server->configure(config["SERVER"]["SQL"]["CONFIG"]);
-    }catch (const std::exception& e) {
+        if(config["SERVER"].contains("SQL")) {
+            main_data.server->configure(config["SERVER"]["SQL"]["CONFIG"]);
+        }
+    } catch (const std::exception& e) {
         cout << "Error connect to SQL: " << e.what() << endl;
     }
-    cout<< "------------------\nProxy pathes:" << endl;
+    if(main_data.proxy_path.size() > 0) {
+        cout << "------------------\nProxy pathes:" << endl;
+    }
     for(json data : main_data.proxy_path) {
         cout << "\t" + data["PATH"].get<string>() + (string)" to " + data["ADRESS"].get<string>() << endl;
         main_data.app_ptr->access[data["PATH"]] = data;
@@ -169,10 +180,11 @@ int main() {
     //logging.allowed_type[log_type::DEBUG] = false;
     logging.config->format_type = "%D-%T";
     read_cfg();
-    if(main_data.config_Data["SERVER"]["CONFIG"]["MODULES"]["ENABLE"].get<bool>() ) {
-        app.init();
+    if (main_data.config_Data["SERVER"]["CONFIG"].contains("MODULES")) {
+        if (main_data.config_Data["SERVER"]["CONFIG"]["MODULES"]["ENABLE"].get<bool>()) {
+            app.init();
+        }
     }
-
 
     evlist = new epoll_event[nfds];
     if(enable_ssl) {
