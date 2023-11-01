@@ -7,4 +7,4 @@
 
 gridgff делает frontend
 firewolf backend
-danielklimovoff делает парсер (руководит процессом)
+danielklimovoff делает парсер (cleaner)
