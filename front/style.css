@@ -1,0 +1,86 @@
+
+h1 {
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    color: white; 
+    font-family: Oswald; 
+    font-size: 44px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 1000; 
+    line-height: 26.4px;
+}
+h2 {
+    position: absolute;
+    top: 110px;
+    left: 45%;
+    right:45%;
+    color: white;
+    font-family: Oswald;
+     font-size: 14px; 
+     font-style: normal; 
+     font-variant: normal; 
+     font-weight: 700; 
+     line-height: 16.4px;}
+body{
+    font-family: "Oswald", sans-serif;
+    background-color: #1531AE;
+    background-image: url('https://s5o.ru/storage/simple/cyber/edt/4b/a5/bc/5c/cybere940219c6ad.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.bar{
+    position: absolute;
+    top: 200px;
+    left: 910px;
+    
+    color: black;
+    width: 230px;
+    background: #ed2b58;
+    padding: 15px;
+    float:left;
+}
+a{
+    text-decoration: none;
+    
+}
+a:visited{
+    color: #26f081;
+}
+li{
+    list-style-type: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.input_pole{
+    position:absolute;
+    left: 940px;
+    top: 150px; 
+}
+input{
+    width: 200px;
+    height: 30px;
+}
