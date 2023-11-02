@@ -1,0 +1,31 @@
+h1 {
+    font-family: Oswald;
+    text-align: center;
+    color: white; 
+    font-size: 44px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 1000; 
+    line-height: 26.4px;
+}
+body{
+    color:white;
+    font-family: Oswald;
+    background-image: url('https://wallpapers.com/images/hd/1920x1080-league-of-legends-background-1920-x-1080-qlh4lpu1k7k9h9he.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.table-of-stats{
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    font-size: 24px;
+}
+a{
+    text-decoration: none;
+    
+}a:visited{
+    color: #26f081;
+}

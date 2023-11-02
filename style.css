@@ -1,0 +1,84 @@
+
+h1 {
+    font-family: Oswald;
+    text-align: center;
+    color: white; 
+    font-size: 44px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 1000; 
+    line-height: 26.4px;
+}
+h2 {
+    font-family: Oswald;
+    text-align: center;
+    color: white;
+     font-size: 24px; 
+     font-style: normal; 
+     font-variant: normal; 
+     font-weight: 700; 
+     line-height: 19.4px;}
+body{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Oswald;
+    background-image: url('https://s5o.ru/storage/simple/cyber/edt/4b/a5/bc/5c/cybere940219c6ad.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.bar{
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-family: Oswald;
+    color: black;
+    background: #ed2b58;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    
+}a:visited{
+    color: #26f081;
+}
+li{
+    list-style-type: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-family: Oswald;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.input_pole{
+    text-align: center;
+}
+input{
+    font-family: Oswald;
+    width: 200px;
+    height: 30px;
+}
+button{
+    margin: auto;
+}
