@@ -4,7 +4,7 @@ from pprint import pprint
 import json
 
 
-API_KEY = 'RGAPI-9a822dba-9b14-42a6-b3b8-4fe96b477a08'
+API_KEY = ''
 
 def main():
     user_data = input_user_data()
