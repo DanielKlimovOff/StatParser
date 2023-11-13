@@ -8,6 +8,16 @@ h1 {
     font-weight: 1000; 
     line-height: 26.4px;
 }
+h2 {
+    font-family: Oswald;
+    text-align: center;
+    color: white; 
+    font-size: 34px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 1000; 
+    line-height: 26.4px;
+}
 body{
     color:white;
     font-family: Oswald;
@@ -19,12 +29,16 @@ body{
 .table-of-stats{
     margin-left: auto;
     margin-right: auto;
+    border-collapse: collapse;
+    border: 1px solid white;
 }
 th{
     font-size: 24px;
+    border: 1px solid white;
 }
 td{
     text-align: center;
+    border: 1px solid white;
 }
 a{
     text-decoration: none;
@@ -32,4 +46,7 @@ a{
 }a:visited{
     color: #26f081;
 }
-
+.message-for-user{
+    margin-left: auto;
+    margin-right: auto;
+}

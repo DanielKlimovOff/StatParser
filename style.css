@@ -76,9 +76,23 @@ li a:hover {
 }
 input{
     font-family: Oswald;
+    color: white;
+    background-color: #333;
     width: 200px;
     height: 30px;
 }
+.button-wrapper{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
 button{
-    margin: auto;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Oswald';
+    color: white;
+    background-color: #333;
 }
