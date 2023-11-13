@@ -23,9 +23,13 @@ body{
 th{
     font-size: 24px;
 }
+td{
+    text-align: center;
+}
 a{
     text-decoration: none;
     
 }a:visited{
     color: #26f081;
 }
+

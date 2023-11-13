@@ -6,11 +6,16 @@
         <link rel="stylesheet" type="text/css" href="style2.css"/>
     </head>
     <body>
-        <h1>S T A T I S T I C S</h1>
+        <h1>S T A T I S T I C S</h1>   
+        <h2 id="user_apply"></h2>
+        <script>
+            var name_value=localStorage.getItem('name_value');
+            name_value=document.getElementById("user_apply").innerHTML;
+        </script>            
         <table class="table-of-stats">
             <th>Character</th>
-            <th>Map</th>
-            <th>KDA</th>
+            <th> Map </th>
+            <th>  KDA  </th>
             <th>Accurancy</th>
             <tr>
                 <tr><td>Deadlock</td><td>Sunset</td><td>20/16/3</td><td>59.9%</td></tr>

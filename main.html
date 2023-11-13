@@ -12,8 +12,13 @@
         <h2>Статистика по матчам</h2>
         <div class="input_pole">
             <input type="text" id="inputRID" placeholder="Enter your RiotID">
-            <script src="main.js"></script>
-            <button onclick="displayText()"><a href="C:\Users\Никита\project_git\StatParser\stats.html">SUBMIT</a></button>
+           
+            <script>
+                var name_value=document.getElementById("inputRID");
+                localStorage.setItem('inputRID', 'name_value');
+                console.log(name_value);
+            </script>
+             <button onclick="location.href='stats.html?'+inputRID.value">SUBMIT</button>
             
         </div>
         <div class="bar">
@@ -21,7 +26,7 @@
                 <ul>
                     <li ><a href="#">HOME</a></li>
                     <li ><a href="#">NEWS</a></li> 
-                    <li><a href="#">ABOUT US</a></li>
+                    <li><a onclick="location.href='about.html?'">ABOUT US</a></li>
                 </ul>
             </nav>
         </div>
